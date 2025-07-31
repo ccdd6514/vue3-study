@@ -1,9 +1,4 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
-<template>
+<!-- <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -11,16 +6,54 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Home1</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div>
+    </div>s
   </header>
 
   <RouterView />
+</template> -->
+
+<template>
+  <!-- <span>Message: {{ count }}</span>
+  <div class="button" @click="count++">
+    {{ count }}
+  </div> -->
+  <RouterView />
 </template>
 
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+// import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue'
+
+const count = ref(0)
+
+// function increment() {
+//   // 在 JavaScript 中需要 .value
+//   count.value++
+// }
+
+// // 不要忘记同时暴露 increment 函数
+// return {
+//   count,
+//   increment
+// }
+</script>
+
+
+
 <style scoped>
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 3rem;
+  background: pink;
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
